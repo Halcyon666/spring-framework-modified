@@ -2,15 +2,16 @@ package org.springframework.mylearntest.ioc.methodreplacer;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.support.MethodReplacer;
 
 import java.lang.reflect.Method;
 
 public class FXNewsProviderMethodReplacer implements MethodReplacer {
 
-	private static final transient Log logger =
-			LogFactory.getLog(FXNewsProviderMethodReplacer.class);
+	private static final Log logger = LogFactory.getLog(FXNewsProviderMethodReplacer.class);
 
+	@NotNull
 	@Override
 	public Object reimplement(Object target, Method method, Object[] args)
 			throws Throwable {

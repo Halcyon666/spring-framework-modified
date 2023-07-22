@@ -2,12 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-	   xmlns:aop="http://www.springframework.org/schema/aop">
+>
 
 	<bean id="datePropertyEditor" class="org.springframework.mylearntest.ioc.beanfactorypostprocessor.DatePropertyEditor">
-		<property name="datePattern">
-			<value>2020/06/21</value>
-		</property>
+		<property name="datePattern" value="2020/06/21"/>
 	</bean>
 
 	<!--<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">

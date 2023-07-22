@@ -6,8 +6,6 @@
 	<bean id="queryMethodPointcut"
 		  class="org.springframework.mylearntest.aop1.pointcut.selfdefinepointcut.QueryMethodPointcut">
 		<!--		mappedNames 将要被拦截的方法名称-->
-		<property name="classFilter">
-			<value>methodName1</value>
-		</property>
+		<property name="classFilter" value="methodName1"/>
 	</bean>
 </beans>

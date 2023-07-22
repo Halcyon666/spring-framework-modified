@@ -1,5 +1,7 @@
 package org.springframework.mylearntest.ioc.beanfactorypostprocessor;
 
+import org.springframework.util.Assert;
+
 import java.beans.PropertyEditorSupport;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -10,8 +12,8 @@ public class DatePropertyEditor extends PropertyEditorSupport {
 	@Override
 	public void setAsText(String text) throws IllegalArgumentException {
 		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(getDatePattern());
-		LocalDate dateValue = LocalDate.parse(text,dateTimeFormatter);
-		System.err.println(dateValue);
+		LocalDate dateValue = LocalDate.parse(text, dateTimeFormatter);
+		Assert.isInstanceOf(LocalDate.class, dateValue);
 		setValue(dateValue);
 	}
 

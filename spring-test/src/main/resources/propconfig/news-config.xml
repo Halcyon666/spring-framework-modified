@@ -4,12 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="djNewsProvider" class="org.springframework.mylearntest.ioc.propconfig.FXNewsProvider">
-		<constructor-arg index="0">
-			<ref bean="djNewsListener"/>
-		</constructor-arg>
-		<constructor-arg index="1">
-			<ref bean="djNewsPersister"/>
-		</constructor-arg>
+		<constructor-arg index="0" ref="djNewsListener"/>
+		<constructor-arg index="1" ref="djNewsPersister"/>
 	</bean>
 
 	<bean id="djNewsListener" class="org.springframework.mylearntest.ioc.propconfig.DjNewsListener">

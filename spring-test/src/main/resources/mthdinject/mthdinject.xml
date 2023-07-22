@@ -5,9 +5,7 @@
 	<bean id="newsBean" class="org.springframework.mylearntest.ioc.directcode.FXNewsBean" scope="prototype">
 	</bean>
 	<bean id="mockPersister" class="org.springframework.mylearntest.ioc.mthdinject.MockNewsPersister">
-		<property name="newsBean">
-			<ref bean="newsBean"/>
-		</property>
+		<property name="newsBean" ref="newsBean"/>
 	</bean>
 
 	<!--<bean id="mockPersister" class="org.springframework.mylearntest.ioc.mthdinject.MockNewsPersister">

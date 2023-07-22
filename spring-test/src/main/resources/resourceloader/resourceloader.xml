@@ -6,8 +6,6 @@
 	</bean>
 
 	<bean id="fooBar" class="org.springframework.mylearntest.ioc.resourceloader.FooBar">
-		<property name="resourceLoader">
-			<ref bean="resourceLoader"/>
-		</property>
+		<property name="resourceLoader" ref="resourceLoader"/>
 	</bean>
 </beans>

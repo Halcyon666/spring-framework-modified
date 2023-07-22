@@ -6,15 +6,11 @@
 		  scope="prototype"/>
 
 	<bean id="prototypeTargetSource" class="org.springframework.aop.target.PrototypeTargetSource">
-		<property name="targetBeanName">
-			<value>target</value>
-		</property>
+		<property name="targetBeanName" value="target"/>
 	</bean>
 
 	<bean id="targetProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
-		<property name="targetSource">
-			<ref bean="prototypeTargetSource"/>
-		</property>
+		<property name="targetSource" ref="prototypeTargetSource"/>
 		<property name="interceptorNames">
 			<list>
 				<value>performanceMethodInterceptor</value>

@@ -8,9 +8,7 @@
 	</bean>
 
 	<bean id="hotSwapTargetSource" class="org.springframework.aop.target.HotSwappableTargetSource">
-		<constructor-arg>
-			<ref bean="task"/>
-		</constructor-arg>
+		<constructor-arg ref="task"/>
 	</bean>
 
 	<bean id="taskProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
