@@ -21,8 +21,7 @@ public class FooBarImplApplicationContextAware implements ApplicationContextAwar
 		return resourceLoader;
 	}
 
-	public void setApplicationContext(ApplicationContext ctx)
-			throws BeansException {
+	public void setApplicationContext(ApplicationContext ctx) throws BeansException {
 		this.resourceLoader = ctx;
 	}
 }

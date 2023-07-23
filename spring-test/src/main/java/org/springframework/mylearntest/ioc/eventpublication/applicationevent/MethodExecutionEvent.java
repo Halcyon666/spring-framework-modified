@@ -12,8 +12,7 @@ public class MethodExecutionEvent extends ApplicationEvent {
 		super(source);
 	}
 
-	public MethodExecutionEvent(Object source, String methodName,
-								MethodExecutionStatus methodExecutionStatus) {
+	public MethodExecutionEvent(Object source, String methodName, MethodExecutionStatus methodExecutionStatus) {
 		super(source);
 		this.methodName = methodName;
 		this.methodExecutionStatus = methodExecutionStatus;
